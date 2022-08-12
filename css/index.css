@@ -1,0 +1,117 @@
+html,body {
+    height: 100%;
+    width: 100%;
+    background-color: #009752;
+    font-family: 'Open Sans', serif;
+    font-size: 14px;
+    font-weight: 300;
+    }
+    
+ .login{
+   padding: 10%;
+   height: 100vh;
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   background-color: #009752;
+   align-items: center;
+   justify-content: center;
+ }
+
+  .box{
+    border: 0px transparent;
+    -webkit-box-shadow: none;
+    background: transparent;
+    margin: 0px;
+    padding:0px;
+
+  }
+
+  .hero-body{
+    width: 50%;
+    padding:10%;
+  }
+
+
+
+
+  .hero .nav, .hero.is-success .nav {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border:0px;
+
+  }
+  input {
+    font-weight: 300;
+  }
+  p {
+    font-weight: 700;
+  }
+
+.button.is-block.is-link.is-large.is-fullwidth{
+  background-color:#009752;
+  border: 1px solid #ffffff;
+
+}
+
+@media screen and (max-width: 764px){
+
+  .login{
+    padding: 0%;
+
+  }
+
+  .hero-body{
+    width: 60%;
+
+  }
+  
+   .button.is-block.is-link.is-large.is-fullwidth{
+    border:1px solid white;
+
+  }
+
+  .column.is-4.is-offset-4{
+
+  }
+
+}
+
+
+@media screen and (max-width: 500px){
+  .login{
+    padding: 5%;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+  }
+   .button.is-block.is-link.is-large.is-fullwidth{
+    border:1px solid white;
+
+  }
+
+  .hero-body{
+    width: 100%;
+    padding: 0;
+
+  }
+
+}
+
+#olho {
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.div-olho {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+  flex-wrap: nowrap;
+  padding: 5px;
+}
+
