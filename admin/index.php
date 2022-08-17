@@ -62,18 +62,18 @@ $diaHoje = date('d/m/Y');
                             </div>
                         </div>
 
-                        <div class="col-xl-6">
-                                <div class="card mb-4">
-                                    <div class="card-header" id="last-reading">
-                                        <i class="fas fa-chart-pie me-1"></i>
-                                        Leitura mais recente do dia de hoje - <?= $diaHoje ?>
-                                    </div>
-                                    <div class="card-body">
-                                        <div id="divLeituraAtual" class="mensagemVazio"></div>
-                                        <canvas id="leituraAtual" width="100%" height="40" aria-label="Gráfico que mostra a última leitura"></canvas>
-                                    </div>
+                        <div class="col-xl-12 d-flex justify-content-center">
+                            <div class="card mb-4">
+                                <div class="card-header" id="last-reading">
+                                    <i class="fas fa-chart-pie me-1"></i>
+                                    Leitura mais recente do dia de hoje - <?= $diaHoje ?>
+                                </div>
+                                <div class="card-body">
+                                    <div id="divLeituraAtual" class="mensagemVazio"></div>
+                                    <div class="umidadeAtualizada"></div>
                                 </div>
                             </div>
+                        </div>
 
                             <div class="col-xl-12">
                                 <div class="card mb-4">

@@ -78,46 +78,50 @@ $(document).ready(function() {
 
 function graficoLeituraRecente (dados) {
 
-    umidade = [];
-    label = [];
+    // umidade = [];
+    // label = [];
 
     leituraRecente = dados[dados.length - 1];
 
+    umidade = leituraRecente[1];
+
     dataFormatada = dateFormatBr(leituraRecente[2]);
 
-    $('#last-reading').text('Leitura mais recente - Atualizada em: ' + dataFormatada);
+    $('#last-reading').text('Leitura mais recente de umidade - Atualizada em: ' + dataFormatada);
 
-    umidade.push(leituraRecente[1]);
-    label.push("Umidade em porcentagem");
+    $('.umidadeAtualizada').text(umidade + " %");
 
-    var data = {
-        labels: label,
-        datasets: [
-            {
-            data: umidade,
-            backgroundColor: colorsBrown,
-            }
-        ]
-    };
+    // umidade.push(leituraRecente[1]);
+    // label.push("Umidade em porcentagem");
 
-    var config = {
-        type: 'doughnut',
-        data: data,
-        options: {
-            responsive: true,
-            plugins: {
-                legend: {
-                    position: 'top',
-                },
-            }
-        },
-        };
+    // var data = {
+    //     labels: label,
+    //     datasets: [
+    //         {
+    //         data: umidade,
+    //         backgroundColor: colorsBrown,
+    //         }
+    //     ]
+    // };
 
-        // Instanciação do novo Gráfico, passando o ID do Canvas do HTML
-        let graficoLeituraRecente = new Chart(
-            document.getElementById('leituraAtual'),
-            config
-        );
+    // var config = {
+    //     type: 'doughnut',
+    //     data: data,
+    //     options: {
+    //         responsive: true,
+    //         plugins: {
+    //             legend: {
+    //                 position: 'top',
+    //             },
+    //         }
+    //     },
+    //     };
+
+    //     // Instanciação do novo Gráfico, passando o ID do Canvas do HTML
+    //     let graficoLeituraRecente = new Chart(
+    //         document.getElementById('leituraAtual'),
+    //         config
+    //     );
 
 }
 

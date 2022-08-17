@@ -15,7 +15,9 @@ function formataData ($data){
     return $data;
 }
 
-$queryRegas = "SELECT * FROM regas INNER JOIN sensor ON (regas.idSensor = sensor.idSensor) WHERE regas.idSensor = 1;";
+$diaHoje = date('Y-m-d');
+
+$queryRegas = "SELECT * FROM regas INNER JOIN sensor ON (regas.idSensor = sensor.idSensor) WHERE regas.idSensor = 1 && regas.dataRega like '{$diaHoje}%';";
 $pesquisaRegas = mysqli_query($mysqli, $queryRegas);
 $resultadoRegas = mysqli_fetch_all($pesquisaRegas);
 

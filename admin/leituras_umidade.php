@@ -15,7 +15,9 @@ function formataData ($data){
     return $data;
 }
 
-$queryUmidades = "SELECT * FROM umidade INNER JOIN sensor ON (umidade.idSensor = sensor.idSensor) WHERE umidade.idSensor = 1;";
+$diaHoje = date('Y-m-d');
+
+$queryUmidades = "SELECT * FROM umidade INNER JOIN sensor ON (umidade.idSensor = sensor.idSensor) WHERE umidade.dataUmidade like '{$diaHoje}%' && umidade.idSensor = 1;";
 $pesquisaUmidades = mysqli_query($mysqli, $queryUmidades);
 $resultadoUmidades = mysqli_fetch_all($pesquisaUmidades);
 

@@ -12085,6 +12085,15 @@ transition: color 300ms ease-in-out;
   color: #3e2d23;
 }
 
+.umidadeAtualizada {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  font-size: 80px;
+  font-weight: bold;
+}
+
 @media (max-width:575px) {
   .filter input {
     margin-top: 0.5rem !important;
