@@ -12,7 +12,7 @@ if(isset($_POST['usuario']) || isset($_POST['senha'])) {
         exit(); 
     } else {
 
-        $secret = "6LeePU8hAAAAAEgXvrK6iwqlBD8b0WG78QXUTMKk";
+        $secret = "";
 
         $response = null;
         $reCaptcha = new ReCaptcha($secret);
